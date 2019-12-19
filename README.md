@@ -1,3 +1,3 @@
-# angular-ffx1sm
+# calc
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-ffx1sm)
