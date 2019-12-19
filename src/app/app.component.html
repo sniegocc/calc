@@ -1,0 +1,10 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+<display expr="{{ expr }}"></display>
+<div >
+   <a *ngFor = 'let lst of btnList' class="btn" (click)="addToExpr($event, lst)">
+      {{lst.val}}
+   </a>
+</div>
