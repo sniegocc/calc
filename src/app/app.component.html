@@ -1,10 +1,9 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
-<display expr="{{ expr }}"></display>
-<div >
-   <a *ngFor = 'let lst of btnList' class="btn" (click)="addToExpr($event, lst)">
+<h2>
+  Calculator
+</h2>
+<div class="box">
+  <display expr="{{ expr }}"></display><br />
+   <a *ngFor = 'let lst of btnList' class="btn {{ lst.class }}" (click)="addToExpr($event, lst)" >
       {{lst.val}}
    </a>
 </div>

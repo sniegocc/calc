@@ -9,21 +9,60 @@ export class AppComponent  {
   name = 'Magda';
   public expr = "";
   btnList: any[] = [ {
-      "ID": "1",
-      "val": 1
+      "val": 1,
+      "class": ""
    },
    {
-      "ID": "2",
-      "val": 2
+      "val": 2,
+      "class": ""
    }, 
    {
-      "ID": "3",
-      "val": 3
-   } 
+      "val": 3,
+      "class": ""
+   },
+   {
+      "val": "+",
+      "class": "btn-outline"
+   },
+   {
+      "val": 4,
+      "class": ""
+   }, 
+   {
+      "val": 5,
+      "class": ""
+   },
+   {
+      "val": 6,
+      "class": ""
+   },
+   {
+      "val": "-",
+      "class": "btn-outline"
+   }, 
+   {
+      "val": 7,
+      "class": ""
+   },
+   {
+      "val": 8,
+      "class": ""
+   },
+   {
+      "val": 9,
+      "class": ""
+   },
+   {
+      "val": "=",
+      "class": "btn-outline"
+   }  
    ];
 
    public addToExpr(event, item) {
-     console.log(item.val)
-    this.expr += item.val;
+     if(item.val === "=") {
+       this.expr = eval(this.expr);
+       }
+     else {this.expr += item.val;}
+    
   }
 }
