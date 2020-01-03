@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Magda';
   public expr = "";
+  tmp = false;
   btnList: any[] = [ {
       "val": 1,
       "class": ""
@@ -59,10 +59,13 @@ export class AppComponent  {
    ];
 
    public addToExpr(event, item) {
-     if(item.val === "=") {
+     if(item.val === "=" ) {
+       if(!isNaN(this.tmp['val'])){
        this.expr = eval(this.expr);
        }
+       }
      else {this.expr += item.val;}
+     this.tmp = item;
     
   }
 }
